@@ -24,10 +24,9 @@ class CreateCustomersTable extends Migration
             $table->string('phone_mobile');
             $table->string('contact_via');
             $table->text('note');
-            $table->timestamps();
             $table->softDeletes();
-            $table->foreign('address_id')->references('id')->on('addresses');
             $table->timestamps();
+            $table->foreign('address_id')->references('id')->on('addresses');
         });
     }
 
